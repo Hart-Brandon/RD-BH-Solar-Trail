@@ -19,8 +19,8 @@ public class SolarTrail {
     public static void main(String[] args) {
       Player playerOne = new Player();  
       
-      playerOne.setName("Tony Stark");
-      playerOne.setHighscore(1000);
+      playerOne.setName("Steve Rogers");
+      playerOne.setHighscore(1500);
       
       String playerInfo = playerOne.toString();
       System.out.println(playerInfo);
