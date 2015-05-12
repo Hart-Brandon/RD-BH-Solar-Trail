@@ -11,8 +11,10 @@ import byui.cit260.solarTrail.model.Game;
 import byui.cit260.solarTrail.model.InventoryItem;
 import byui.cit260.solarTrail.model.Location;
 import byui.cit260.solarTrail.model.Map;
+import byui.cit260.solarTrail.model.Planet;
 import byui.cit260.solarTrail.model.Player;
 import byui.cit260.solarTrail.model.Ship;
+import byui.cit260.solarTrail.model.TravelingEventScene;
 import byui.cit260.solarTrail.model.VisitPlanetScene;
 
 /**
@@ -127,6 +129,28 @@ public class SolarTrail {
                             
       String MapInfo = GameMap.toString();
       System.out.println(MapInfo);
+      //End Test
+      
+      //Start Test Planet class
+      Planet Alderaan = new Planet();
+      
+      Alderaan.setDescription("A peaceful planet, with no weapons");
+      Alderaan.setType("Peaceful");
+                                  
+      String PlanetInfo = Alderaan.toString();
+      System.out.println(PlanetInfo);
+      //End Test
+      
+      //Start Test TravelingEventScene class
+      TravelingEventScene Pirates = new TravelingEventScene();
+      
+      Pirates.setDescription("You engage in space piracy and steal another ships's food!");
+      Pirates.setItemType("Food");
+      Pirates.setNumOfItems(15);
+      Pirates.setTravelTime(60);
+                                  
+      String TravelInfo = Pirates.toString();
+      System.out.println(TravelInfo);
       //End Test
       
     }
