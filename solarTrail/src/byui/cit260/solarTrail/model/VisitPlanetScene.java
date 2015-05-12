@@ -24,7 +24,7 @@ public class VisitPlanetScene implements Serializable{
     private int waterAvailable;
     private int foodAvailable;
             
-        public VisitPlanetScene() {
+    public VisitPlanetScene() {
     }
 
     public String getDescription() {
