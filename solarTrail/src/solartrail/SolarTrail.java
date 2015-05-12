@@ -30,6 +30,21 @@ public class SolarTrail {
       System.out.println(playerInfo);
       //End Test
       
+      //Start Test Ship class
+      Ship theKestral = new Ship();
+      
+      theKestral.setDescription("A bird of prey");
+      theKestral.setActualCrewSize(5);
+      theKestral.setCargoCapacity(500);
+      theKestral.setStatus("Damaged plenty, but she'll fly true.");
+      theKestral.setMaxCrewCapacity(10);
+      theKestral.setMinCrewCapacity(1);
+      theKestral.setSize(30);
+      theKestral.setSpeed(600);
+      
+      String shipInfo = theKestral.toString();
+      System.out.println(shipInfo);
+      
       //Start Test VisitPlanetScene class
       VisitPlanetScene sceneOne = new VisitPlanetScene();
       
