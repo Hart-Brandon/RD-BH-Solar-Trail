@@ -5,6 +5,12 @@
  */
 package solartrail;
 
+import byui.cit260.solarTrail.model.Actor;
+import byui.cit260.solarTrail.model.CargoHold;
+import byui.cit260.solarTrail.model.Game;
+import byui.cit260.solarTrail.model.InventoryItem;
+import byui.cit260.solarTrail.model.Location;
+import byui.cit260.solarTrail.model.Map;
 import byui.cit260.solarTrail.model.Player;
 import byui.cit260.solarTrail.model.Ship;
 import byui.cit260.solarTrail.model.VisitPlanetScene;
@@ -60,7 +66,68 @@ public class SolarTrail {
       String sceneInfo = sceneOne.toString();
       System.out.println(sceneInfo);
       //End Test
+     
+      //Start Test Actor class
+      Actor actorOne = new Actor();
       
+      actorOne.setName("Bruce Banner");
+      actorOne.setDescription("A small man with glasses");
+      actorOne.setHighscore(700);
+            
+      String actorInfo = actorOne.toString();
+      System.out.println(actorInfo);
+      //End Test     
+      
+       //Start Test CargoHold class
+      CargoHold CargoOne = new CargoHold();
+      
+      CargoOne.setMaxQuantity(160);
+                
+      String CargoInfo = CargoOne.toString();
+      System.out.println(CargoInfo);
+      //End Test    
+      
+      //Start Test Game class
+      Game GameOne = new Game();
+      
+      GameOne.setTotalTime(90);
+                
+      String GameInfo = GameOne.toString();
+      System.out.println(GameInfo);
+      //End Test
+      
+      //Start Test InventroyItem class
+      InventoryItem FoodBars = new InventoryItem();
+      
+      FoodBars.setDescription("Protein in all the colors of the rainbow.");
+      FoodBars.setInventoryType("Food");
+      FoodBars.setQuantityInStock(60);
+      FoodBars.setRequiredAmount(55);
+                
+      String InventoryInfo = FoodBars.toString();
+      System.out.println(InventoryInfo);
+      //End Test
+      
+      //Start Test Location class
+      Location MarsBase = new Location();
+      
+      MarsBase.setColumn(3);
+      MarsBase.setRow(4);
+      MarsBase.setVisited(true);
+                      
+      String LocationInfo = MarsBase.toString();
+      System.out.println(LocationInfo);
+      //End Test
+    
+      //Start Test Map class
+      Map GameMap = new Map();
+      
+      GameMap.setColumnCount(6);
+      GameMap.setRowCount(10);
+                            
+      String MapInfo = GameMap.toString();
+      System.out.println(MapInfo);
+      //End Test
       
     }
 }
