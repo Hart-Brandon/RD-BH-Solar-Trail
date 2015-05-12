@@ -12,7 +12,7 @@ import java.util.Objects;
  *
  * @author BHart
  */
-public class TravellingEventScene implements Serializable{
+public class TravelingEventScene implements Serializable{
     
     //Class instance variables
     private String description;
@@ -20,7 +20,7 @@ public class TravellingEventScene implements Serializable{
     private int numOfItems;
     private double travelTime;
 
-    public TravellingEventScene() {
+    public TravelingEventScene() {
     }
 
     public String getDescription() {
