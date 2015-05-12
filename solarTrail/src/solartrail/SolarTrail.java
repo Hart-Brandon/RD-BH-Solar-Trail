@@ -44,6 +44,7 @@ public class SolarTrail {
       
       String shipInfo = theKestral.toString();
       System.out.println(shipInfo);
+      //End Test
       
       //Start Test VisitPlanetScene class
       VisitPlanetScene sceneOne = new VisitPlanetScene();
@@ -59,6 +60,7 @@ public class SolarTrail {
       String sceneInfo = sceneOne.toString();
       System.out.println(sceneInfo);
       //End Test
+      
+      
     }
-    
 }
