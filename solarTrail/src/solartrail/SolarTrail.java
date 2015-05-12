@@ -17,7 +17,7 @@ public class SolarTrail {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      Player playerOne = new Player();  
+      Player playerOne = new Player();
       
       playerOne.setName("Steve Rogers");
       playerOne.setHighscore(1500);
