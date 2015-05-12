@@ -57,7 +57,7 @@ public class TravelingEventScene implements Serializable{
 
     @Override
     public String toString() {
-        return "TravellingEventScene{" + "description=" + description + ", itemType=" + itemType + ", numOfItems=" + numOfItems + ", travelTime=" + travelTime + '}';
+        return "TravelingEventScene{" + "description=" + description + ", itemType=" + itemType + ", numOfItems=" + numOfItems + ", travelTime=" + travelTime + '}';
     }
 
     @Override
@@ -78,7 +78,7 @@ public class TravelingEventScene implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final TravellingEventScene other = (TravellingEventScene) obj;
+        final TravelingEventScene other = (TravelingEventScene) obj;
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
