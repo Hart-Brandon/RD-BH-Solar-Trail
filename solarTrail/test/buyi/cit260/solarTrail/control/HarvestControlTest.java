@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author BHart
+ * @author BHart & RDunn
  */
 public class HarvestControlTest {
     
