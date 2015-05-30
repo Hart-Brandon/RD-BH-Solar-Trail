@@ -45,8 +45,6 @@ public class GameControlTest {
         fail("The test case is a prototype.");
     }
 
-
-
     /**
      * Test of highScore method, of class GameControl.
      */
@@ -153,4 +151,4 @@ public class GameControlTest {
     }        
     }
     
-}
+
