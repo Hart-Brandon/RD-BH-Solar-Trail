@@ -26,9 +26,25 @@ public class GameControlTest {
     @After
     public void tearDown() {
     }
-/**
- * Put Brandon's test info back in here when you are done testing.
- */
+    
+    /**
+     * Test of endGame method, of class GameControl.
+     */
+    @Test
+    public void testEndGame() {
+        System.out.println("endGame");
+        int difficultyLvl = 0;
+        int numDays = 0;
+        int totalResources = 0;
+        int daysLeft = 0;
+        GameControl instance = new GameControl();
+        int expResult = 0;
+        int result = instance.endGame(difficultyLvl, numDays, totalResources, daysLeft);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
 
 
     /**
