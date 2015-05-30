@@ -33,7 +33,7 @@ public class GameControl {
         if (eventsCleared < 0)
             return -1;
         
-        int score = (int) (difficultyLvl * .5) * ( 1 + (crewAlive * .25)) * ((eventsCleared*500) + (artifactScore * 1000))
+        int score = (int) (difficultyLvl * .5) * ( 1 + (crewAlive * .25)) * ((eventsCleared*500) + (artifactScore * 1000));
         
         if (score < 0) 
             return -1;
