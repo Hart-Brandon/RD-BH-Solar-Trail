@@ -23,7 +23,7 @@ public class GameControl {
         return resourcesLeft;
     }
         public double highScore(double difficultyLvl, double crewAlive, double eventsCleared, 
-            int artifactScore) {
+            double artifactScore) {
         if (difficultyLvl > 3)
             return -1;
         if (crewAlive < 0)
