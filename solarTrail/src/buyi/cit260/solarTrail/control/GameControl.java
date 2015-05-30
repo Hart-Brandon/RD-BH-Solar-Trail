@@ -10,19 +10,20 @@ package buyi.cit260.solarTrail.control;
  * @author BHart
  */
 public class GameControl {
-    public int endGame(int difficultyLvl, int numDays, int totalResources, 
+    public int endGame(double difficultyLvl, int numDays, int totalResources, 
             int daysLeft) {
-        if (numDays > daysLeft)
+        if (numDays > daysLeft || numDays < 0)
             return -1;
         
-        int resourcesLeft = (int) totalResources - (1 - (1 * difficultyLvl)) * numDays;
+        int resourcesLeft = (int) ((int) totalResources - (1 - (1 * difficultyLvl)) * numDays);
         
         if (resourcesLeft < 0) 
             return -1;
         
         return resourcesLeft;
     }
-        public double highScore(double difficultyLvl, double crewAlive, double eventsCleared, 
+    
+    public double highScore(double difficultyLvl, double crewAlive, double eventsCleared, 
             double artifactScore) {
         if (difficultyLvl > 3)
             return -1;

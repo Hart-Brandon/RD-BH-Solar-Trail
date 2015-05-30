@@ -32,17 +32,89 @@ public class GameControlTest {
      */
     @Test
     public void testEndGame() {
-        System.out.println("endGame");
-        int difficultyLvl = 0;
-        int numDays = 0;
-        int totalResources = 0;
-        int daysLeft = 0;
+        /**********************
+         * Test Case #1
+         **********************/
+        System.out.println("endGame Valid Test");
+        double difficultyLvl = .0;
+        int numDays = 30;
+        int totalResources = 30;
+        int daysLeft = 30;
         GameControl instance = new GameControl();
         int expResult = 0;
         int result = instance.endGame(difficultyLvl, numDays, totalResources, daysLeft);
+        System.out.println(result);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+        /**********************
+         * Test Case #2
+         **********************/
+        System.out.println("endGame Invalid Test #1");
+        difficultyLvl = .5;
+        numDays = 731;
+        totalResources = 30;
+        daysLeft = 30;
+        instance = new GameControl();
+        expResult = -1;
+        result = instance.endGame(difficultyLvl, numDays, totalResources, daysLeft);
+        System.out.println(result);
+        assertEquals(expResult, result);
+        
+        /**********************
+         * Test Case #2
+         **********************/
+        System.out.println("endGame Invalid Test #1");
+        difficultyLvl = .5;
+        numDays = 731;
+        totalResources = 30;
+        daysLeft = 30;
+        instance = new GameControl();
+        expResult = -1;
+        result = instance.endGame(difficultyLvl, numDays, totalResources, daysLeft);
+        System.out.println(result);
+        assertEquals(expResult, result);
+        
+        /**********************
+         * Test Case #3
+         **********************/
+        System.out.println("endGame Invalid Test #2");
+        difficultyLvl = .25;
+        numDays = -1;
+        totalResources = 30;
+        daysLeft = 30;
+        instance = new GameControl();
+        expResult = -1;
+        result = instance.endGame(difficultyLvl, numDays, totalResources, daysLeft);
+        System.out.println(result);
+        assertEquals(expResult, result);
+        
+        /**********************
+         * Test Case #4
+         **********************/
+        System.out.println("endGame Boundry Test #1");
+        difficultyLvl = 0;
+        numDays = 0;
+        totalResources = 730;
+        daysLeft = 0;
+        instance = new GameControl();
+        expResult = 730;
+        result = instance.endGame(difficultyLvl, numDays, totalResources, daysLeft);
+        System.out.println(result);
+        assertEquals(expResult, result);
+        
+        /**********************
+         * Test Case #5
+         **********************/
+        System.out.println("endGame Boundry Test #2");
+        difficultyLvl = .25;
+        numDays = 730;
+        totalResources = 730;
+        daysLeft = 730;
+        instance = new GameControl();
+        expResult = 182;
+        result = instance.endGame(difficultyLvl, numDays, totalResources, daysLeft);
+        System.out.println(result);
+        assertEquals(expResult, result);
     }
 
     /**
