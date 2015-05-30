@@ -22,7 +22,7 @@ public class GameControl {
         
         return resourcesLeft;
     }
-        public int highScore(int difficultyLvl, int crewAlive, int eventsCleared, 
+        public double highScore(double difficultyLvl, double crewAlive, double eventsCleared, 
             int artifactScore) {
         if (difficultyLvl > 3)
             return -1;
@@ -33,7 +33,7 @@ public class GameControl {
         if (eventsCleared < 0)
             return -1;
         
-        int score = (int) (difficultyLvl * .5) * ( 1 + (crewAlive * .25)) * ((eventsCleared*500) + (artifactScore * 1000));
+        double score = (double) (difficultyLvl * .5) * ( 1 + (crewAlive * .25)) * ((eventsCleared*500) + (artifactScore * 1000));
         
         if (score < 0) 
             return -1;
