@@ -33,6 +33,8 @@ public class SolarTrail {
         
       StartProgramView startProgramView = new StartProgramView();
       startProgramView.startProgram();
+      
+      
       /**  
       //Start Test Player class
       Player playerOne = new Player();

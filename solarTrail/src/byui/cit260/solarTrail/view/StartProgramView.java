@@ -24,11 +24,9 @@ public class StartProgramView {
         //Display the game description and banner screen
         this.displayBanner();
         
-        //Display Game Name Banner
-        
-
-        //Display Game Menu
-        
+        //Display the Main Menu
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.displayMenu();
     }
 
     private void displayBanner() {
@@ -65,6 +63,7 @@ public class StartProgramView {
             Logger.getLogger(StartProgramView.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+        // Should clear the screen for Game banner and Main Menu
         try {
             final String os = System.getProperty("os.name");
 
