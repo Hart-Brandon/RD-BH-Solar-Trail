@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package buyi.cit260.solarTrail.control;
+package byui.cit260.solarTrail.control;
 
 /**
  *
  * @author BHart
  */
-public class ShipControl {
+public class MapControl {
     
 }

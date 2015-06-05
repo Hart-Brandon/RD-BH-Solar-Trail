@@ -50,5 +50,4 @@ public class Game implements Serializable{
         final Game other = (Game) obj;
         return Double.doubleToLongBits(this.totalTime) == Double.doubleToLongBits(other.totalTime);
     }
-    
 }

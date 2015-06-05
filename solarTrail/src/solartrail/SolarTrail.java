@@ -16,18 +16,24 @@ import byui.cit260.solarTrail.model.Player;
 import byui.cit260.solarTrail.model.Ship;
 import byui.cit260.solarTrail.model.TravelingEventScene;
 import byui.cit260.solarTrail.model.VisitPlanetScene;
+import byui.cit260.solarTrail.view.StartProgramView;
 
 /**
  *
  * @author BHart and RDunn
  */
 public class SolarTrail {
-
+    
     /**
      * @param args the command line arguments
      */
+    
+
     public static void main(String[] args) {
         
+      StartProgramView startProgramView = new StartProgramView();
+      startProgramView.startProgram();
+      /**  
       //Start Test Player class
       Player playerOne = new Player();
       
@@ -152,6 +158,6 @@ public class SolarTrail {
       String TravelInfo = Pirates.toString();
       System.out.println(TravelInfo);
       //End Test
-      
+      */   
     }
 }

@@ -5,6 +5,7 @@
  */
 package buyi.cit260.solarTrail.control;
 
+import byui.cit260.solarTrail.control.HarvestControl;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

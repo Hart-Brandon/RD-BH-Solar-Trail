@@ -5,6 +5,7 @@
  */
 package buyi.cit260.solarTrail.control;
 
+import byui.cit260.solarTrail.control.GameControl;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
