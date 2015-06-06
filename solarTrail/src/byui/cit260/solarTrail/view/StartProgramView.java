@@ -5,7 +5,10 @@
  */
 package byui.cit260.solarTrail.view;
 
+import byui.cit260.solarTrail.control.GameControl;
+import byui.cit260.solarTrail.model.Player;
 import java.io.IOException;
+import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -13,13 +16,16 @@ import java.util.logging.Logger;
  *
  * @author BHart
  */
-public class StartProgramView {
+public class StartProgramView 
+{
     
-    public StartProgramView() {
+    public StartProgramView() 
+    {
         
     }
     
-    public void startProgram() {
+    public void startProgram() 
+    {
         
         //Display the game description and banner screen
         this.displayBanner();
@@ -27,9 +33,19 @@ public class StartProgramView {
         //Display the Main Menu
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.displayMenu();
+        
+        //Prompt user to enter their characters name
+        String playersName = this.getPlayersName();
+        
+        //Create and save the player object
+        Player player = GameControl.createPlayer(playersName);
+      
+        //Display a personalized welcome message
+        this.displayWelcomeMessage(player);
     }
 
-    private void displayBanner() {
+    private void displayBanner() 
+    {
         System.out.println("\n\n****************************************"
                            + "\n*                                      *"
                            + "\n* In the year 2042, astronomers pick   *"
@@ -57,14 +73,18 @@ public class StartProgramView {
         
         System.out.println("\n\nPress any key to continue...");
         
-        try {
+        try 
+        {
             System.in.read();
-        } catch (IOException ex) {
+        } 
+        catch (IOException ex) 
+        {
             Logger.getLogger(StartProgramView.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         // Should clear the screen for Game banner and Main Menu
-        try {
+        try 
+        {
             final String os = System.getProperty("os.name");
 
             if (os.contains("Windows"))
@@ -75,9 +95,11 @@ public class StartProgramView {
             {
                 Runtime.getRuntime().exec("clear");
             }
-        } catch (final Exception e) {
+        } 
+        catch (final Exception e) 
+        {
         //  Handle any exceptions.
-    }
+        }
         
         System.out.println("\n  _________      .__                 ___________             .__.__          "
                          + "\n /   _____/ ____ |  | _____ _______  \\__    ___/___________  |__|  |   ______"
@@ -85,5 +107,40 @@ public class StartProgramView {
                          + "\n /        (  <_> )  |__/ __ \\|  | \\/   |    |   |  | \\// __ \\|  |  |__\\___ \\ "
                          + "\n/_______  /\\____/|____(____  /__|      |____|   |__|  (____  /__|____/____  >"
                          + "\n        \\/                 \\/                              \\/             \\/ ");
+    }
+
+    public String getPlayersName() 
+    {
+        boolean valid = false; //indicates if the name has been retrieved
+        String playersName = null;
+        Scanner keyboard = new Scanner(System.in);
+        
+        while (!valid)
+        {
+            //Prompt for character's name
+            System.out.println("Enter the character's name below:");
+            
+            //Get Character name and trim off the blank spaces
+            playersName = keyboard.nextLine();
+            playersName = playersName.trim();
+            
+            //Check if name is valid (2+ character length)
+            if (playersName.length() < 2)
+            {
+                System.out.println("Invalid name - must be longer than 2 characters");
+                continue; //prompt user again
+            }
+            break; //Exit while loop
+        }
+        
+        return playersName;
+    }
+
+    private void displayWelcomeMessage(Player player) 
+    {
+        System.out.println("\n\n========================================"
+                         + "\n  Dr. " + player.getName() + ", welcome to the "
+                         + "\n  expedition. We have 3 ships you "
+                         + "\n  can choose from for your journey.");
     }
 }

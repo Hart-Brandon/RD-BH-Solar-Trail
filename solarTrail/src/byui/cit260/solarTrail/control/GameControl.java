@@ -5,11 +5,15 @@
  */
 package byui.cit260.solarTrail.control;
 
+import byui.cit260.solarTrail.model.Player;
+import solartrail.SolarTrail;
+
 /**
  *
  * @author BHart
  */
 public class GameControl {
+
     public int endGame(double difficultyLvl, int numDays, int totalResources, 
             int daysLeft) {
         if (numDays > daysLeft || numDays < 0)
@@ -40,5 +44,20 @@ public class GameControl {
             return -1;
         
         return score;
+    }
+    
+    public static Player createPlayer(String playersName) 
+    {
+        if (playersName == null)
+        {
+            return null;
+        }
+        
+        Player player = new Player();
+        player.setName(playersName);
+        
+        SolarTrail.setPlayer(player); //save player
+        
+        return player;
     }
 }

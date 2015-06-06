@@ -23,11 +23,32 @@ import byui.cit260.solarTrail.view.StartProgramView;
  * @author BHart and RDunn
  */
 public class SolarTrail {
-    
     /**
      * @param args the command line arguments
      */
     
+    private static Game currentGame = null;
+    private static Player player = null;
+    
+    public static Game getCurrentGame() 
+    {
+        return currentGame;
+    }
+    
+    public static void setCurrentGame(Game currentGame)
+    {
+        SolarTrail.currentGame = currentGame; 
+    }
+    
+    public static Player getPlayer()
+    {
+        return player;
+    }
+    
+    public static void setPlayer(Player player)
+    {
+        SolarTrail.player = player;
+    }
 
     public static void main(String[] args) {
         
