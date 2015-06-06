@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author BHart
+ * @author BHart and Rdunn
  */
 public class StartProgramView 
 {
