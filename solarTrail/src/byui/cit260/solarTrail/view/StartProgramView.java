@@ -45,6 +45,8 @@ public class StartProgramView
         //Move into the ship menu
         ShipMenuView shipMenu = new ShipMenuView();
         shipMenu.displayShipMenu();
+        InGameView harvest = new InGameView();
+        harvest.harvestAmount();
     }
 
     private void displayBanner() 
