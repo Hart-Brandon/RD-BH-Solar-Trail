@@ -11,7 +11,8 @@ import java.util.Scanner;
  *
  * @author BHart and RDunn
  */
-public class MainMenuView {
+public class MainMenuView 
+{
     
     private final String MENU = "\n"
            + "\t\t\t\tN - New Game\n" 
@@ -37,36 +38,37 @@ public class MainMenuView {
         }
     
         public String getInput() 
-    {
-        boolean valid = false; //indicates if the name has been retrieved
-        String input = null;
-        Scanner keyboard = new Scanner(System.in);
-        
-        while (!valid)
         {
-            //Prompt for response
-            System.out.println("Enter your response below:");
-            
-            //Get response and trim off the blank spaces
-            input = keyboard.nextLine();
-            input = input.trim();
-            
-            //Check if name is valid (-2 character length)
-            if (input.length() > 1)
-            {
-                System.out.println("Invalid Entry - Please type one letter.");
-                continue; //prompt user again
-            }
-            break; //Exit while loop
-        }
+            boolean valid = false; //indicates if the name has been retrieved
+            String input = null;
+            Scanner keyboard = new Scanner(System.in);
         
-        return input;
-    }
+            while (!valid)
+            {
+                //Prompt for response
+                System.out.println("Enter your response below:");
+            
+                //Get response and trim off the blank spaces
+                input = keyboard.nextLine();
+                input = input.trim();
+            
+                //Check if name is valid (-2 character length)
+                if (input.length() > 1)
+                {
+                    System.out.println("Invalid Entry - Please type one letter.");
+                    continue; //prompt user again
+                }
+                break; //Exit while loop
+            }
+        
+            return input;
+        }
         
         public void doAction(char choice)
         {
         
-            switch (choice) {
+            switch (choice) 
+            {
             case 'N': //New Game
                 this.newGame();
                 break;
@@ -81,7 +83,7 @@ public class MainMenuView {
             default:
                 System.out.println("\n***Invalid Selection.  Try Again.***");
                 break;
-        }
+            }
         }
         
         private void newGame() {
@@ -96,5 +98,4 @@ public class MainMenuView {
             HelpMenuView helpMenuView = new HelpMenuView();
             helpMenuView.displayHelpMenu();
         }
-        
 }

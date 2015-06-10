@@ -66,7 +66,8 @@ public class HelpMenuView {
         public void doAction(char choice)
         {
         
-            switch (choice) {
+            switch (choice) 
+            {
             case 'G': //Game goal
                 this.gameGoal();
                 break;
@@ -81,7 +82,7 @@ public class HelpMenuView {
             default:
                 System.out.println("\n***Invalid Selection.  Try Again.***");
                 break;
-        }
+            }
         }
         
         private void gameGoal() {
