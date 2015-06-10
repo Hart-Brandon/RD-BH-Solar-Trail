@@ -42,6 +42,9 @@ public class StartProgramView
       
         //Display a personalized welcome message
         this.displayWelcomeMessage(player);
+        //Move into the ship menu
+        ShipMenuView shipMenu = new ShipMenuView();
+        shipMenu.displayShipMenu();
     }
 
     private void displayBanner() 
@@ -142,5 +145,5 @@ public class StartProgramView
                          + "\n  Dr. " + player.getName() + ", welcome to the "
                          + "\n  expedition. We have 3 ships you "
                          + "\n  can choose from for your journey.");
-    }
+                  }
 }
