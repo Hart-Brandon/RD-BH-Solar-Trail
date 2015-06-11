@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author rdunn42
  */
-public class InventoryItem implements Serializable{
-    
+public class InventoryItem implements Serializable {
+
     //Class instance variables
     private String description;
     private String inventoryType;
@@ -93,6 +93,5 @@ public class InventoryItem implements Serializable{
         }
         return true;
     }
-    
-    
+
 }

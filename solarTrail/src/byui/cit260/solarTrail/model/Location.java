@@ -11,8 +11,8 @@ import java.io.Serializable;
  *
  * @author BHart
  */
-public class Location implements Serializable{
-    
+public class Location implements Serializable {
+
     //Class instance variables
     private int row;
     private int column;

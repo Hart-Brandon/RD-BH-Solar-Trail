@@ -11,15 +11,15 @@ import java.io.Serializable;
  *
  * @author rdunn42
  */
-public class Map implements Serializable{
-    
+public class Map implements Serializable {
+
     //Class instance variables
     private int rowCount;
     private int columnCount;
 
     public Map() {
     }
-    
+
     public int getRowCount() {
         return rowCount;
     }
@@ -35,12 +35,12 @@ public class Map implements Serializable{
     public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
     }
-    
+
     @Override
     public String toString() {
         return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 3;

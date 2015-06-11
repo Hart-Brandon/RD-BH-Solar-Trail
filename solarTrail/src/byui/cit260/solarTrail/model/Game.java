@@ -11,8 +11,8 @@ import java.io.Serializable;
  *
  * @author rdunn42
  */
-public class Game implements Serializable{
-    
+public class Game implements Serializable {
+
     //Class instance variables
     private double totalTime;
 

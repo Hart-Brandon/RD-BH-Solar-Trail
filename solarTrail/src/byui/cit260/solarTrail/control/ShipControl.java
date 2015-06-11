@@ -10,5 +10,5 @@ package byui.cit260.solarTrail.control;
  * @author BHart
  */
 public class ShipControl {
-    
+
 }

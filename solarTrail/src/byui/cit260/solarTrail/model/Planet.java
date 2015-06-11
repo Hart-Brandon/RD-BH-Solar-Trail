@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author BHart
  */
-public class Planet implements Serializable{
-    
+public class Planet implements Serializable {
+
     //Class instance variables
     private String description;
     private String type;

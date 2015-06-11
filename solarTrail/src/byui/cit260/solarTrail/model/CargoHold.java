@@ -11,8 +11,8 @@ import java.io.Serializable;
  *
  * @author rdunn42
  */
-public class CargoHold implements Serializable{
-    
+public class CargoHold implements Serializable {
+
     //Class instance variables
     private int maxQuantity;
 

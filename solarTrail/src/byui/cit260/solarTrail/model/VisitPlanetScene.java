@@ -7,14 +7,13 @@ package byui.cit260.solarTrail.model;
 
 import java.io.Serializable;
 import java.util.Objects;
-        
 
 /**
  *
  * @author rdunn42
  */
-public class VisitPlanetScene implements Serializable{
-    
+public class VisitPlanetScene implements Serializable {
+
     //Class instance variables
     private String description;
     private double travelTime;
@@ -23,7 +22,7 @@ public class VisitPlanetScene implements Serializable{
     private int fuelAvailable;
     private int waterAvailable;
     private int foodAvailable;
-            
+
     public VisitPlanetScene() {
     }
 
@@ -134,6 +133,4 @@ public class VisitPlanetScene implements Serializable{
         return true;
     }
 
-            
-    
 }

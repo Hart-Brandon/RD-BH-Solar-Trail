@@ -12,15 +12,15 @@ import java.util.Objects;
  *
  * @author BHart and rdunn42
  */
-public class Player implements Serializable{
-    
+public class Player implements Serializable {
+
     // class instance variables
     private String name;
     private double highscore;
 
     public Player() {
     }
-    
+
     public String getName() {
         return name;
     }
@@ -67,8 +67,5 @@ public class Player implements Serializable{
         }
         return true;
     }
-    
-    
+
 }
-
-

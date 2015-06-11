@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author BHart
  */
-public class Actor implements Serializable{
-    
+public class Actor implements Serializable {
+
     //Class instance variables
     private String name;
     private String description;

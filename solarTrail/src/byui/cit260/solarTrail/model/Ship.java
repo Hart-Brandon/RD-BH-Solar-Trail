@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author rdunn42
  */
-public class Ship implements Serializable{
-    
+public class Ship implements Serializable {
+
     // Class instance variables
     private String description;
     private String status;
@@ -27,7 +27,7 @@ public class Ship implements Serializable{
     //Default Constructor
     public Ship() {
     }
-    
+
     //Getters & Setters
     public String getDescription() {
         return description;
@@ -145,6 +145,5 @@ public class Ship implements Serializable{
         }
         return Double.doubleToLongBits(this.speed) == Double.doubleToLongBits(other.speed);
     }
-    
-    
+
 }

@@ -12,8 +12,8 @@ import java.util.Objects;
  *
  * @author BHart
  */
-public class TravelingEventScene implements Serializable{
-    
+public class TravelingEventScene implements Serializable {
+
     //Class instance variables
     private String description;
     private String itemType;
