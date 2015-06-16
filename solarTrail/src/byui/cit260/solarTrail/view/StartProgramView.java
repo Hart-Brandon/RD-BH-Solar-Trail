@@ -47,7 +47,7 @@ public class StartProgramView
         shipMenu.display();
 
         CrewView crew = new CrewView();
-        crew.displayCrewMenu();
+        crew.display();
 
         InGameView harvest = new InGameView();
         harvest.harvestAmount();
