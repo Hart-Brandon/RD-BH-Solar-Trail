@@ -16,20 +16,23 @@ import java.util.logging.Logger;
  *
  * @author BHart and Rdunn
  */
-public class StartProgramView {
+public class StartProgramView
+{
 
-    public StartProgramView() {
+    public StartProgramView()
+    {
 
     }
 
-    public void startProgram() {
+    public void startProgram()
+    {
 
         //Display the game description and banner screen
         this.displayBanner();
 
         //Display the Main Menu
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.displayMenu();
+        mainMenu.display();
 
         //Prompt user to enter their characters name
         String playersName = this.getPlayersName();
@@ -50,7 +53,8 @@ public class StartProgramView {
         harvest.harvestAmount();
     }
 
-    private void displayBanner() {
+    private void displayBanner()
+    {
         System.out.println("\n\n\t\t****************************************"
                 + "\n\t\t*                                      *"
                 + "\n\t\t* In the year 2042, astronomers pick   *"
@@ -78,22 +82,28 @@ public class StartProgramView {
 
         System.out.println("\n\nPress any key to continue...");
 
-        try {
+        try
+        {
             System.in.read();
-        } catch (IOException ex) {
+        } catch (IOException ex)
+        {
             Logger.getLogger(StartProgramView.class.getName()).log(Level.SEVERE, null, ex);
         }
 
         // Should clear the screen for Game banner and Main Menu
-        try {
+        try
+        {
             final String os = System.getProperty("os.name");
 
-            if (os.contains("Windows")) {
+            if (os.contains("Windows"))
+            {
                 Runtime.getRuntime().exec("cls");
-            } else {
+            } else
+            {
                 Runtime.getRuntime().exec("clear");
             }
-        } catch (final Exception e) {
+        } catch (final Exception e)
+        {
             //  Handle any exceptions.
         }
 
@@ -105,12 +115,14 @@ public class StartProgramView {
                 + "\n        \\/                 \\/                              \\/             \\/ ");
     }
 
-    public String getPlayersName() {
+    public String getPlayersName()
+    {
         boolean valid = false; //indicates if the name has been retrieved
         String playersName = null;
         Scanner keyboard = new Scanner(System.in);
 
-        while (!valid) {
+        while (!valid)
+        {
             //Prompt for character's name
             System.out.println("Enter the character's name below:");
 
@@ -119,7 +131,8 @@ public class StartProgramView {
             playersName = playersName.trim();
 
             //Check if name is valid (2+ character length)
-            if (playersName.length() < 2) {
+            if (playersName.length() < 2)
+            {
                 System.out.println("Invalid name - must be longer than 2 characters");
                 continue; //prompt user again
             }
@@ -129,7 +142,8 @@ public class StartProgramView {
         return playersName;
     }
 
-    private void displayWelcomeMessage(Player player) {
+    private void displayWelcomeMessage(Player player)
+    {
         System.out.println("\n\n========================================"
                 + "\n  Dr. " + player.getName() + ", welcome to the "
                 + "\n  expedition. We have 3 ships you "
