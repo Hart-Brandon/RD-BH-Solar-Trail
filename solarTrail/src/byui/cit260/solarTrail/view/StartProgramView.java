@@ -44,7 +44,7 @@ public class StartProgramView
         this.displayWelcomeMessage(player);
         //Move into the ship menu
         ShipMenuView shipMenu = new ShipMenuView();
-        shipMenu.displayShipMenu();
+        shipMenu.display();
 
         CrewView crew = new CrewView();
         crew.displayCrewMenu();

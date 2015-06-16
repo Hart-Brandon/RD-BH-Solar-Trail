@@ -21,6 +21,7 @@ public class MainMenuView extends View
                 + "\t\t\t\tQ - Quit\n");
     }
 
+    @Override
     public boolean doAction(Object obj)
     {
         String value = (String) obj;
@@ -62,6 +63,6 @@ public class MainMenuView extends View
     private void helpMenu()
     {
         HelpMenuView helpMenuView = new HelpMenuView();
-        helpMenuView.displayHelpMenu();
+        helpMenuView.display();
     }
 }
