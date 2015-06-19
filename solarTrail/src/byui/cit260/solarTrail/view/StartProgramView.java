@@ -49,8 +49,8 @@ public class StartProgramView
         CrewView crew = new CrewView();
         crew.display();
 
-        InGameView harvest = new InGameView();
-        harvest.harvestAmount();
+        SpaceEventView spaceevent = new SpaceEventView();
+        spaceevent.display();
     }
 
     private void displayBanner()
