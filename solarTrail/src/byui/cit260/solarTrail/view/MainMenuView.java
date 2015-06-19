@@ -29,18 +29,18 @@ public class MainMenuView extends View
         value = value.toUpperCase(); //convert to all upper case
         char choice = value.charAt(0); //get first character entered
 
-        switch (value)
+        switch (choice)
         {
-            case "N": //New Game
+            case 'N': //New Game
                 this.newGame();
                 break;
-            case "L": //Load Game
+            case 'L': //Load Game
                 this.loadGame();
                 break;
-            case "H": //Help Menu
+            case 'H': //Help Menu
                 this.helpMenu();
                 break;
-            case "Q": //Quit
+            case 'Q': //Quit
                 System.exit(0);
                 break;
             default:

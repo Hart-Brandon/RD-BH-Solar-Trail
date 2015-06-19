@@ -9,6 +9,9 @@ package byui.cit260.solarTrail.control;
  *
  * @author BHart
  */
-public class EventControl {
-
+public interface ControlInterface
+{
+    public void display();
+    public String getInput();
+    public boolean doAction(Object obj);
 }

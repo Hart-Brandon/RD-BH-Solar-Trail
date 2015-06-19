@@ -9,27 +9,33 @@ package byui.cit260.solarTrail.control;
  *
  * @author BHart & RDunn
  */
-public class HarvestControl {
+public class HarvestControl
+{
 
     public int huntForResources(int amountAvailable, int amountToHarvest,
-            int numCrew, int actualCrew, int cargoSpaceLeft, int daysLeft) {
+            int numCrew, int actualCrew, int cargoSpaceLeft, int daysLeft)
+    {
 
-        if (numCrew > (actualCrew - 1)) {
+        if (numCrew > (actualCrew - 1))
+        {
             return -1;
         }
 
-        if (amountAvailable < amountToHarvest) {
+        if (amountAvailable < amountToHarvest)
+        {
             return -1;
         }
 
-        if (cargoSpaceLeft < amountToHarvest) {
+        if (cargoSpaceLeft < amountToHarvest)
+        {
             return -1;
         }
 
         int timeToHarvest = (int) ((amountToHarvest * 0.5)
                 - ((amountToHarvest * 0.5) * (numCrew - 1) * 0.1));
 
-        if (timeToHarvest > daysLeft) {
+        if (timeToHarvest > daysLeft)
+        {
             return -1;
         }
 

@@ -31,18 +31,18 @@ public class HelpMenuView extends View
         value = value.toUpperCase(); //convert to all upper case
         char choice = value.charAt(0); //get first character entered
 
-        switch (value)
+        switch (choice)
         {
-            case "G": //Game goal
+            case 'G': //Game goal
                 this.gameGoal();
                 break;
-            case "M": //How to Move
+            case 'M': //How to Move
                 this.howToMove();
                 break;
-            case "R": //Gathering Resources
+            case 'R': //Gathering Resources
                 this.gatheringResources();
                 break;
-            case "Q": //Quit
+            case 'Q': //Quit
                 System.exit(0);
                 break;
             default:
