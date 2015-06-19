@@ -39,21 +39,21 @@ public class ShipMenuView extends View
         value = value.toUpperCase(); //convert to all upper case
         char choice = value.charAt(0); //get first character entered
         
-        switch (value)
+        switch (choice)
         {
-            case "A":
+            case 'A':
                 difficulty = 1;
                 //Easy Mode
                 break;
-            case "B":
+            case 'B':
                 difficulty = 2;
                 //Normal Mode
                 break;
-            case "C": //Hard
+            case 'C': //Hard
                 difficulty = 1;
                 //Hard Mode
                 break;
-            case "Q": //Quit
+            case 'Q': //Quit
                 System.exit(0);
                 break;
             default:
