@@ -5,6 +5,9 @@
  */
 package byui.cit260.solarTrail.view;
 
+import byui.cit260.solarTrail.control.GameControl;
+import solartrail.SolarTrail;
+
 /**
  *
  * @author BHart and RDunn
@@ -52,7 +55,10 @@ public class MainMenuView extends View
 
     private void newGame()
     {
-        System.out.println("***newGame funtion called***");
+        GameControl.createNewGame(SolarTrail.getPlayer());
+        
+        InGameView gameMenu = new InGameView();
+        gameMenu.display();
     }
 
     private void loadGame()

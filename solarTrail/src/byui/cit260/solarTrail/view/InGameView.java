@@ -6,56 +6,65 @@
 package byui.cit260.solarTrail.view;
 
 import java.util.Scanner;
+import byui.cit260.solarTrail.control.GameControl;
+import solartrail.SolarTrail;
 
 /**
  *
  * @author BHart
  */
-public class InGameView {
+public class InGameView extends View{
 
-    private final String ERROR_MSG = "The value entered is invalid.";
+    public InGameView()
+    {
+        super("\n"
+                + "\t\t\t\tN - New Game\n"
+                + "\t\t\t\tL - Load Game\n"
+                + "\t\t\t\tH - Help\n"
+                + "\t\t\t\tQ - Quit\n");
+    }
+    
+    @Override
+    public boolean doAction(Object obj)
+    {
+        String value = (String) obj;
 
-    //Used when player wants to harvest items
-    public int harvestAmount() {
-        int harvestValue = 0;
-        Scanner scanner = new Scanner(System.in);
-        boolean valid = false;
+        value = value.toUpperCase(); //convert to all upper case
+        char choice = value.charAt(0); //get first character entered
 
-        //Loops until user inputs valid int value
-        while (valid == false) {
-            System.out.println("How many resources would you like to harvest? (max: 30)");
-
-            //Checks whether the input is a valid int between 0 and 30
-            if (harvestValue < 0 || harvestValue > 30) {
-                System.out.println(ERROR_MSG);
+        switch (choice)
+        {
+            case 'S': //New Game
+                this.saveGame();
                 break;
-            } else {
-                harvestValue = scanner.nextInt();
-            }
+            case 'L': //Load Game
+                this.loadGame();
+                break;
+            case 'H': //Help Menu
+                this.helpMenu();
+                break;
+            case 'Q': //Quit
+                System.exit(0);
+                break;
+            default:
+                System.out.println("\n***Invalid Selection.  Try Again.***");
+                break;
         }
-        return harvestValue;
+        return true;
     }
 
-    //Used when player is at the final stage of the outward journey
-    public int artifactDays() {
-        int artifactTime = 0;
-        Scanner scanner = new Scanner(System.in);
-        boolean valid = false;
+    private void saveGame()
+    {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
-        //Loops until user inputs valid int value
-        while (valid == false) {
-            System.out.println("The radiation from the artifact will overwhelm your"
-                    + "\n  shields in 60 days.  You cannot stay longer than that."
-                    + "\n\n How many days would you like to stay?");
+    private void loadGame()
+    {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
-            //Checks whether the input is a valid int between 0 and 30
-            if (artifactTime < 0 || artifactTime > 60) {
-                System.out.println(ERROR_MSG);
-                break;
-            } else {
-                artifactTime = scanner.nextInt();
-            }
-        }
-        return artifactTime;
+    private void helpMenu()
+    {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

@@ -11,7 +11,7 @@ package byui.cit260.solarTrail.control;
  */
 public class InventoryControl extends Control
 {
-
+    
     public InventoryControl()
     {
         super("\t*************"
