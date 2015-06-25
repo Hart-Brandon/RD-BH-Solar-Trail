@@ -23,9 +23,14 @@ public class InGameView extends View{
     public InGameView()
     {
         super("\n"
-                + "\t\t\t\tN - New Game\n"
+                + "\t\t\t\tM - Map\n"
+                + "\t\t\t\tI - Inventory\n"
+                + "\t\t\t\tC - Crew\n"
+                + "\t\t\t\tR - Repair Ship\n"                
+                + "\t\t\t\tT - Travel Onward\n"
+                + "\t\t\t\tS - Save Game\n"
                 + "\t\t\t\tL - Load Game\n"
-                + "\t\t\t\tH - Help\n"
+                + "\t\t\t\tH - Help Menu\n"
                 + "\t\t\t\tQ - Quit\n");
     }
     
@@ -49,7 +54,7 @@ public class InGameView extends View{
 
         switch (choice)
         {
-            case 'V':
+            case 'M':
                 this.displayMap(locations);
                 break;
             case 'I': //View Inventory
