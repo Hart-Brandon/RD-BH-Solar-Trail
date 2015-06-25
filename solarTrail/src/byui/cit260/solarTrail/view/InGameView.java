@@ -100,15 +100,32 @@ public class InGameView extends View{
                          + "\t\\____/ \\__\\__,_|_|     \\___/ \\___\\___|\\__,_|_| |_|\n"
                          + "\t                                                  ");
         
-        System.out.println("Earth  *  *  Mars  *  *  Jupiter  *  * Saturn  *  *  Uranus");
-        
-        for (Location[] location : locations)
-        {
-            for (int j = 0; j < locations.length; j++)
-            {
-                System.out.println(location[j]);
+        System.out.println("| Earth |   *   |   *   | Mars  |   *   |   *   |Jupiter|   *   |   *   |Saturn |   *   |   *   |Uranus |");
+        System.out.println("_________________________________________________________________________________________________________");
+        for (int row = 0; row < locations.length; row++)
+        {   
+            System.out.println("|");
+            
+            for (int col = 0; col < locations.length; col++)
+            {   
+                if (locations[row][col].isVisited() == true)
+                {
+                    System.out.println("   X   ");
+                }
+                else
+                {
+                    System.out.println((row + 1) + "       ");
+                }
+                
+                if (row == 1 && col == 0)
+                {
+                    System.out.println("_________________________________________________________________________________________________________");
+                }
+                
+                System.out.println("|");
             }
         }
+        System.out.println("_________________________________________________________________________________________________________");
     }
 
     private void viewInventory()
