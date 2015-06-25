@@ -92,19 +92,21 @@ public class InGameView extends View{
 
     private void displayMap(Location[][] locations)
     {
-        System.out.println("\t_____ _               _____                      "
-                         + "\t/  ___| |             |  _  |                     "
-                         + "\t\\ `--.| |_ __ _ _ __  | | | | ___ ___  __ _ _ __  "
-                         + "\t `--. \\ __/ _` | '__| | | | |/ __/ _ \\/ _` | '_ \\ "
-                         + "\t/\\__/ / || (_| | |    \\ \\_/ / (_|  __/ (_| | | | |"
-                         + "\t\\____/ \\__\\__,_|_|     \\___/ \\___\\___|\\__,_|_| |_|"
+        System.out.println("\t _____ _               _____                      \n"
+                         + "\t/  ___| |             |  _  |                     \n"
+                         + "\t\\ `--.| |_ __ _ _ __  | | | | ___ ___  __ _ _ __  \n"
+                         + "\t `--. \\ __/ _` | '__| | | | |/ __/ _ \\/ _` | '_ \\ \n"
+                         + "\t/\\__/ / || (_| | |    \\ \\_/ / (_|  __/ (_| | | | |\n"
+                         + "\t\\____/ \\__\\__,_|_|     \\___/ \\___\\___|\\__,_|_| |_|\n"
                          + "\t                                                  ");
         
-        for (int i = 0; i < locations.length; i++)
+        System.out.println("Earth  *  *  Mars  *  *  Jupiter  *  * Saturn  *  *  Uranus");
+        
+        for (Location[] location : locations)
         {
             for (int j = 0; j < locations.length; j++)
             {
-                
+                System.out.println(location[j]);
             }
         }
     }

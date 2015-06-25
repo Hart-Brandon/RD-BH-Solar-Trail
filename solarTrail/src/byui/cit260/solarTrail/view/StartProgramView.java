@@ -27,6 +27,8 @@ public class StartProgramView
     public void startProgram()
     {
 
+        InGameView gameMenu = new InGameView();
+        gameMenu.display();
         //Display the game description and banner screen
         this.displayBanner();
 
@@ -46,6 +48,8 @@ public class StartProgramView
         ShipMenuView shipMenu = new ShipMenuView();
         shipMenu.display();
 
+        
+        
         CrewView crew = new CrewView();
         crew.display();
 
