@@ -6,6 +6,7 @@
 package byui.cit260.solarTrail.model;
 
 import byui.cit260.solarTrail.control.GameControl;
+import static byui.cit260.solarTrail.model.Scene.createScenes;
 import java.io.Serializable;
 
 /**
@@ -88,10 +89,10 @@ public class Map implements Serializable
         Map map = new Map(13, 2);
 
         //create the scenes for the game
-        //Scene[] scenes = createScenes();
+        Scene[] scenes = createScenes();
 
         //assign scenes to locations
-        //GameControl.assignScenesToLocations(map, scenes);
+        GameControl.assignScenesToLocations(map, scenes);
 
         return map;
     }

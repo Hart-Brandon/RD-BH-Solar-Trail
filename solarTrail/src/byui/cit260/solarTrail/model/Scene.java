@@ -16,7 +16,7 @@ import solartrail.SolarTrail;
 public class Scene implements Serializable 
 { 
     private static String description;
-    private static Object SceneType;
+    private static SceneType screenTypeObj;
     private static String mapSymbol;
     private static boolean blocked;
     private static double travelTime;
@@ -65,12 +65,12 @@ public class Scene implements Serializable
 
     public static Object getSceneType()
     {
-        return SceneType;
+        return screenTypeObj;
     }
 
-    public static void setSceneType(Object SceneType)
+    public static void setSceneType(SceneType theScene)
     {
-        Scene.SceneType = SceneType;
+        Scene.screenTypeObj = theScene;
     }
     
         
@@ -83,13 +83,13 @@ public class Scene implements Serializable
         finish
     }
     
-    public static Scene createScenes() //throws MapControlException
+    public static Scene[] createScenes() //throws MapControlException
     {
         BufferedImage image = null;
         
         Game game = SolarTrail.getCurrentGame();
         
-        //Scene[] scenes = new Scene[SceneType.values().length];
+        Scene[] scenes = new Scene[screenTypeObj.values().length];
         
         Scene startingScene = new Scene();
         startingScene.setDescription("\nYou set off for your space adventure "
@@ -118,6 +118,6 @@ public class Scene implements Serializable
         //finishScene.setIcon(finishSceneImage);
         //scenes[SceneType.finish.ordinal[()] = finishScene;
         
-        return startingScene;
+        return scenes;
     }
 }
