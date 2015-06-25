@@ -12,38 +12,48 @@ import java.util.Objects;
  *
  * @author BHart
  */
-public class Planet implements Serializable {
+public class Planet implements Serializable
+{
 
     //Class instance variables
     private String description;
     private String type;
 
-    public Planet() {
+    public Planet()
+    {
+        this.description = "This is the 'this' for the Planet description.";
+        this.type = "This is the 'this' for the Planet type.";
     }
 
-    public String getDescription() {
+    public String getDescription()
+    {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(String description)
+    {
         this.description = description;
     }
 
-    public String getType() {
+    public String getType()
+    {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(String type)
+    {
         this.type = type;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Planet{" + "description=" + description + ", type=" + type + '}';
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
         int hash = 5;
         hash = 79 * hash + Objects.hashCode(this.description);
         hash = 79 * hash + Objects.hashCode(this.type);
@@ -51,18 +61,23 @@ public class Planet implements Serializable {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
+    public boolean equals(Object obj)
+    {
+        if (obj == null)
+        {
             return false;
         }
-        if (getClass() != obj.getClass()) {
+        if (getClass() != obj.getClass())
+        {
             return false;
         }
         final Planet other = (Planet) obj;
-        if (!Objects.equals(this.description, other.description)) {
+        if (!Objects.equals(this.description, other.description))
+        {
             return false;
         }
-        if (!Objects.equals(this.type, other.type)) {
+        if (!Objects.equals(this.type, other.type))
+        {
             return false;
         }
         return true;

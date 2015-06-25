@@ -6,6 +6,7 @@
 package byui.cit260.solarTrail.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,8 +18,13 @@ public class Location implements Serializable {
     private int row;
     private int column;
     private boolean visited;
+    private Scene scene;
+    private ArrayList<Actor> actors;
 
     public Location(int x, int y) {
+        this.row = x;
+        this.column = y;
+        this.visited = false;
     }
 
     public int getRow() {
@@ -43,6 +49,26 @@ public class Location implements Serializable {
 
     public void setVisited(boolean visited) {
         this.visited = visited;
+    }
+    
+    public Scene getScene()
+    {
+        return scene;
+    }
+
+    public void setScene(Scene scene)
+    {
+        this.scene = scene;
+    }
+
+    public ArrayList<Actor> getActors()
+    {
+        return actors;
+    }
+
+    public void setActors(ArrayList<Actor> actors)
+    {
+        this.actors = actors;
     }
 
     @Override

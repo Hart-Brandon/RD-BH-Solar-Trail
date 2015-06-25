@@ -12,38 +12,48 @@ import java.util.Objects;
  *
  * @author BHart and rdunn42
  */
-public class Player implements Serializable {
+public class Player implements Serializable
+{
 
     // class instance variables
     private String name;
     private double highscore;
 
-    public Player() {
+    public Player()
+    {
+        this.name = "\nThis is the 'this' for Player name.";
+        this.highscore = 0;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    public double getHighscore() {
+    public double getHighscore()
+    {
         return highscore;
     }
 
-    public void setHighscore(double highscore) {
+    public void setHighscore(double highscore)
+    {
         this.highscore = highscore;
     }
 
     @Override
-    public String toString() {
+    public String toString()
+    {
         return "Player{" + "name=" + name + ", highscore=" + highscore + '}';
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode()
+    {
         int hash = 7;
         hash = 67 * hash + Objects.hashCode(this.name);
         hash = 67 * hash + (int) (Double.doubleToLongBits(this.highscore) ^ (Double.doubleToLongBits(this.highscore) >>> 32));
@@ -51,18 +61,23 @@ public class Player implements Serializable {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
+    public boolean equals(Object obj)
+    {
+        if (obj == null)
+        {
             return false;
         }
-        if (getClass() != obj.getClass()) {
+        if (getClass() != obj.getClass())
+        {
             return false;
         }
         final Player other = (Player) obj;
-        if (!Objects.equals(this.name, other.name)) {
+        if (!Objects.equals(this.name, other.name))
+        {
             return false;
         }
-        if (Double.doubleToLongBits(this.highscore) != Double.doubleToLongBits(other.highscore)) {
+        if (Double.doubleToLongBits(this.highscore) != Double.doubleToLongBits(other.highscore))
+        {
             return false;
         }
         return true;

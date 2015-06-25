@@ -25,6 +25,11 @@ public class Game implements Serializable {
     private String[] actors; //List of actors (NPCs and Crew)
 
     public Game() {
+        ship = new Ship();
+        player = new Player();
+        map = new Map();
+        inventory = new InventoryItem[]{};
+        actors = new String[]{};
     }
 
     public double getTotalTime()

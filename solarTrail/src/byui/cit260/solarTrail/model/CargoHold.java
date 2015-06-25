@@ -17,6 +17,7 @@ public class CargoHold implements Serializable {
     private int maxQuantity;
 
     public CargoHold() {
+        this.maxQuantity = 0;
     }
 
     public int getMaxQuantity() {

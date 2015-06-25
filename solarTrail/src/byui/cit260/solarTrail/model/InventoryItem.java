@@ -21,6 +21,10 @@ public class InventoryItem implements Serializable {
     private int requiredAmount;
 
     public InventoryItem() {
+        this.description = "\nThis is the 'this' for the InventoryItem description.";
+        this.inventoryType = "\nThis is the 'this' for the InventoryItem inventoryType.";
+        this.quantityInStock = 0;
+        this.requiredAmount = 0;
     }
 
     public String getDescription() {

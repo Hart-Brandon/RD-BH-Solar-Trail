@@ -7,8 +7,11 @@ package byui.cit260.solarTrail.control;
 
 import byui.cit260.solarTrail.model.Game;
 import byui.cit260.solarTrail.model.InventoryItem;
+import byui.cit260.solarTrail.model.Location;
 import byui.cit260.solarTrail.model.Map;
 import byui.cit260.solarTrail.model.Player;
+import byui.cit260.solarTrail.model.Scene;
+import byui.cit260.solarTrail.model.Scene.SceneType;
 import byui.cit260.solarTrail.model.Ship;
 import java.util.Scanner;
 import solartrail.SolarTrail;
@@ -20,6 +23,38 @@ import solartrail.SolarTrail;
 public class GameControl
 {
     private final String ERROR_MSG = "The value entered is invalid.";
+
+    public static void assignScenesToLocations(Map map, Scene[] scenes)
+    {
+        Location[][] locations = map.getLocations();
+        
+        locations[0][0].setScene(scenes[SceneType.start.ordinal()]);
+        locations[0][1].setScene(scenes[SceneType.space.ordinal()]);
+        locations[0][2].setScene(scenes[SceneType.space.ordinal()]);
+        locations[0][3].setScene(scenes[SceneType.planet.ordinal()]);
+        locations[0][4].setScene(scenes[SceneType.space.ordinal()]);
+        locations[0][5].setScene(scenes[SceneType.space.ordinal()]);
+        locations[0][6].setScene(scenes[SceneType.planet.ordinal()]);
+        locations[0][7].setScene(scenes[SceneType.space.ordinal()]);
+        locations[0][8].setScene(scenes[SceneType.space.ordinal()]);
+        locations[0][9].setScene(scenes[SceneType.planet.ordinal()]);
+        locations[0][10].setScene(scenes[SceneType.space.ordinal()]);
+        locations[0][11].setScene(scenes[SceneType.space.ordinal()]);
+        locations[0][12].setScene(scenes[SceneType.artifact.ordinal()]);
+        locations[1][0].setScene(scenes[SceneType.space.ordinal()]);
+        locations[1][1].setScene(scenes[SceneType.space.ordinal()]);
+        locations[1][2].setScene(scenes[SceneType.planet.ordinal()]);
+        locations[1][3].setScene(scenes[SceneType.space.ordinal()]);
+        locations[1][4].setScene(scenes[SceneType.space.ordinal()]);
+        locations[1][5].setScene(scenes[SceneType.planet.ordinal()]);
+        locations[1][6].setScene(scenes[SceneType.space.ordinal()]);
+        locations[1][7].setScene(scenes[SceneType.space.ordinal()]);
+        locations[1][8].setScene(scenes[SceneType.planet.ordinal()]);
+        locations[1][9].setScene(scenes[SceneType.space.ordinal()]);
+        locations[1][10].setScene(scenes[SceneType.space.ordinal()]);
+        locations[1][11].setScene(scenes[SceneType.space.ordinal()]);
+        locations[1][12].setScene(scenes[SceneType.finish.ordinal()]);
+    }
     
     public enum Item
     {
