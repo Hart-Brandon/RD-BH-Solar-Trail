@@ -25,6 +25,8 @@ public class Location implements Serializable {
         this.row = x;
         this.column = y;
         this.visited = false;
+        this.scene = scene;
+        this.actors = actors;
     }
 
     public int getRow() {
