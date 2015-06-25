@@ -127,7 +127,15 @@ public class InGameView extends View{
                 
                 if (row == 0 && col == 12)
                 {
-                    System.out.println("|\n|_______|_______|_______|_______|_______|_______|_______|_______|_______|_______|_______|_______|       |");
+                    System.out.printf("|\n|_______|_______|_______|_______|_______|_______|_______|_______|_______|_______|_______|_______|");
+                    if (locations[row][col].isVisited() == true)
+                    {
+                        System.out.println("   X   |");
+                    }
+                    else
+                    {
+                        System.out.println("       |");
+                    };
                 }
             }
         }
