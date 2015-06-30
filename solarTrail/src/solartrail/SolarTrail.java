@@ -53,8 +53,15 @@ public class SolarTrail {
     public static void main(String[] args) {
         
       StartProgramView startProgramView = new StartProgramView();
+      try {
       startProgramView.startProgram();
-      
+      }
+      catch (Throwable te)
+      {
+          System.out.println(te.getMessage());
+          te.printStackTrace();
+          startProgramView.startProgram();
+      }
       
       /**  
       //Start Test Player class
