@@ -5,17 +5,8 @@
  */
 package solartrail;
 
-import byui.cit260.solarTrail.model.Actor;
-import byui.cit260.solarTrail.model.CargoHold;
 import byui.cit260.solarTrail.model.Game;
-import byui.cit260.solarTrail.model.InventoryItem;
-import byui.cit260.solarTrail.model.Location;
-import byui.cit260.solarTrail.model.Map;
-import byui.cit260.solarTrail.model.Planet;
 import byui.cit260.solarTrail.model.Player;
-import byui.cit260.solarTrail.model.Ship;
-import byui.cit260.solarTrail.model.TravelingEventScene;
-import byui.cit260.solarTrail.model.VisitPlanetScene;
 import byui.cit260.solarTrail.view.StartProgramView;
 
 /**

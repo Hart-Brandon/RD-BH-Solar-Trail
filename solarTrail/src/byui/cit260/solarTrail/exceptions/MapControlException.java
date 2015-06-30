@@ -38,7 +38,4 @@ public class MapControlException extends Exception
     {
         super(string, thrwbl, bln, bln1);
     }
-
-   
-
 }
